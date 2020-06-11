@@ -10,10 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_11_193616) do
+ActiveRecord::Schema.define(version: 2020_06_11_233452) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "parts", force: :cascade do |t|
+    t.string "part_number", null: false
+    t.string "owner", default: ""
+    t.datetime "date_added"
+    t.string "description", null: false
+    t.integer "available", null: false
+    t.integer "reserved", default: 0
+    t.integer "sold", default: 0
+    t.string "condition", null: false
+    t.integer "cost_min", null: false
+    t.integer "price_min", null: false
+    t.integer "order_min", null: false
+    t.integer "cost_med", default: 0
+    t.integer "price_med", default: 0
+    t.integer "order_med", default: 0
+    t.integer "cost_max", default: 0
+    t.integer "price_max", default: 0
+    t.integer "order_max", default: 0
+    t.string "lead_time", default: ""
+    t.string "quote_type", default: ""
+    t.text "tag", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email"
