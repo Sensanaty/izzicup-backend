@@ -1,10 +1,11 @@
 class PartsController < ApplicationController
   before_action :set_part, only: [:show, :update, :destroy]
+  after_action { pagy_headers_merge(@pagy) if @pagy }
 
   def index
-    @parts = Part.all
+    @pagy, @parts = pagy(Part.all)
 
-    render json: @parts
+    render json: { parts: @parts, pagy: pagy_metadata(@pagy) }
   end
 
   def show
