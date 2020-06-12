@@ -1,6 +1,9 @@
 User.create!(email: "test@email.com", password: "password", password_confirmation: 'password')
 puts "Email: test@email.com\nPassword: password"
 
+User.create(email: "admin@email.com", password: "password", password_confirmation: "password", admin: true)
+puts "Email: admin@email.com\nPassword:password"
+
 puts "Generating 50 parts"
 50.times do
   Part.create(part_number: Faker::Alphanumeric.alphanumeric(number: rand(9..16)).upcase,
