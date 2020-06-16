@@ -5,7 +5,7 @@ class PartsController < ApplicationController
   def index
     @pagy, @parts = pagy(Part.all)
 
-    render json: { parts: @parts, pagy: pagy_metadata(@pagy) }
+    render json: { parts: PartSerializer.new(@parts).serializable_hash, pagy: pagy_metadata(@pagy) }
   end
 
   def show
