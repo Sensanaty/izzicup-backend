@@ -1,7 +1,7 @@
 class AuthorizeApiRequest
   prepend SimpleCommand
 
-  def initialize(header = {})
+  def initialize(headers = {})
     @headers = headers
   end
 
