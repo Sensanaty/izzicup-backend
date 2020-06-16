@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authorize_admin, only: [:index, :create, :create, :destroy]
+  before_action :authorize_admin, only: [:index, :create, :destroy]
   before_action :set_user, only: [:show, :update, :destroy]
 
   def index
@@ -49,6 +49,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit!
+    params.require(:user).permit(:email, :password)
   end
 end
