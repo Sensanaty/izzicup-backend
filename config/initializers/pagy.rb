@@ -40,9 +40,9 @@ Pagy::VARS[:headers] = {page: 'Current-Page', items: 'Page-Items', count: 'Total
 
 # Items extra: Allow the client to request a custom number of items per page with an optional selector UI
 # See https://ddnexus.github.io/pagy/extras/items
-# require 'pagy/extras/items'
-# Pagy::VARS[:items_param] = :items    # default
-# Pagy::VARS[:max_items]   = 100       # default
+require 'pagy/extras/items'
+Pagy::VARS[:items_param] = :items    # default
+Pagy::VARS[:max_items]   = 150       # default
 
 # Overflow extra: Allow for easy handling of overflowing pages
 # See https://ddnexus.github.io/pagy/extras/overflow
