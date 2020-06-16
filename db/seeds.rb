@@ -1,8 +1,11 @@
-User.create!(email: "test@email.com", password: "password", password_confirmation: 'password')
-puts "Email: test@email.com\nPassword: password"
+User.destroy_all
+Part.destroy_all
 
-User.create(email: "admin@email.com", password: "password", password_confirmation: "password", admin: true)
-puts "Email: admin@email.com\nPassword:password"
+User.create!(email: "test@email.com", password: "Password1", password_confirmation: 'Password1')
+puts "Email: test@email.com\nPassword: Password1"
+
+User.create!(email: "admin@email.com", password: "Password1", password_confirmation: "Password1", admin: true)
+puts "Email: admin@email.com\nPassword: Password1"
 
 puts "Generating 50 parts"
 50.times do
