@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/fast-jsonapi/fast_jsonapi
+  revision: 3ff69ccce1a75fb0210874dba1b77f05a79ec8f2
+  specs:
+    fast_jsonapi (2.0.0)
+      activesupport (>= 4.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -157,6 +164,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   faker
+  fast_jsonapi!
   jwt
   listen (~> 3.2)
   pagy
