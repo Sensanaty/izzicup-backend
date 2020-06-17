@@ -15,6 +15,7 @@ gem 'fast_jsonapi', git: 'https://github.com/fast-jsonapi/fast_jsonapi'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails'
 end
 
 group :development do
